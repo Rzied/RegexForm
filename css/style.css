@@ -1,0 +1,168 @@
+html,
+body,
+form,
+div,
+label,
+input {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+label {
+    flex: 2;
+    align-items: center;
+}
+
+body {
+    flex: 0.6;
+    margin: 0;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    font-size: 1.2em;
+}
+
+img {
+    width: 100%;
+}
+
+.gauche {
+    justify-content: start;
+    padding-left: 1vw;
+}
+
+h1 {
+    font-weight: normal;
+    background-color: rgb(60, 60, 60);
+    padding: 1.5vh 2vw;
+    border-radius: 2vw;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+form {
+    flex-direction: column;
+    background-color: rgb(60, 60, 60);
+    padding: 4vh 3vw;
+    border-radius: 2vh;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+form input {
+    background-color: rgb(80, 80, 80);
+    padding: 0.5vh 0.5vw;
+    border: unset;
+    border-bottom: 4px solid white;
+    color: white;
+    font-size: 1.2em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    outline: none;
+    margin: 0vh 1vw;
+}
+
+.ligne {
+    padding-bottom: 0.8em;
+}
+
+.message {
+    border-radius: 2vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    padding: 0.5vh;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.message.visible {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+form input:focus {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+form input[type="submit"] {
+    margin-top: 3vh;
+    padding: 1vh 2vw;
+    color: #666666;
+    border-bottom: 4px solid #666666;
+    width: 50%;
+    align-self: center;
+}
+
+input[required]+div::before {
+    content: "*";
+    color: red;
+}
+
+
+.info {
+    position: relative;
+}
+
+.picto {
+    flex: 0.2;
+    margin: 0 1vw;
+}
+
+.texteInfoBulle {
+    position: absolute;
+    top: 0;
+    left: 4vh;
+    font-size: 0.8em;
+    display: none;
+    white-space: nowrap;
+    border-radius: 2vh;
+    background-color: rgba(24, 24, 24, 0.5);
+    padding: 0.5vh;
+}
+
+.check i {
+    display: none;
+}
+
+.infobulle {
+    justify-content: end;
+}
+
+.aideMdp {
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 10vh;
+    font-size: 0.8em;
+    display: none;
+    white-space: nowrap;
+    border-radius: 2vh;
+    background-color: rgba(24, 24, 24, 1);
+    padding: 1vh;
+}
+
+li {
+    list-style-type: none;
+}
+
+.mini {
+    flex: 0.1;
+}
+
+.oeil {
+    position: absolute;
+    left: -3vw;
+    top: 1vh;
+}
+
+.vert {
+    color: #3db651;
+}
+
+.rouge {
+    color: red;
+
+}

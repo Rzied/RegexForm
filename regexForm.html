@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Regex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/ce4feb7268.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>Regex sur un formulaire</h1>
+
+    <form action="" method="POST">
+        <div class="ligne">
+            <label for="nom">Nom</label>
+            <input required class="checkValidity" type="text" name="nom" id="nom"
+                title="En majuscule, minimum 2 caratères" pattern="^([A-ZÀ-Ý -]){2,}[^*x]$">
+            <div class="mini"></div>
+            <div class="info picto">
+                <i class="far fa-question-circle fa-2x infobulle"></i>
+                <div class="texteInfoBulle"></div>
+            </div>
+            <div class="check picto">
+                <i class="far fa-check-circle fa-2x vert"></i>
+            </div>
+            <div class="message"></div>
+        </div>
+        <div class="ligne">
+            <label for="prenom">Prenom</label>
+            <input class="checkValidity" type="text" name="prenom" id="prenom" title="1ère lettre en majuscule"
+                pattern="^[A-ZÀ-Ý]{1}[a-zà-ý '-]*$">
+            <div class="mini"></div>
+            <div class="info picto">
+                <i class="far fa-question-circle fa-2x infobulle"></i>
+                <div class="texteInfoBulle"></div>
+            </div>
+            <div class="check picto">
+                <i class="far fa-check-circle fa-2x vert"></i>
+            </div>
+            <div class="message"></div>
+        </div>
+
+        <div class="ligne">
+            <label for="email">Email</label>
+            <input required class="checkValidity" type="email" name="email" id="email" title="une adresse mail vadivde"
+                pattern="^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$">
+            <div class="mini"></div>
+            <div class="info picto">
+                <i class="far fa-question-circle fa-2x infobulle"></i>
+                <div class="texteInfoBulle"></div>
+            </div>
+            <div class="check picto">
+                <i class="far fa-check-circle fa-2x vert"></i>
+            </div>
+            <div class="message"></div>
+        </div>
+
+        <div class="ligne">
+            <label for="mdp">Mot de Passe</label>
+            <input required class="checkValidity" type="password" name="mdp" id="mdp" title=""
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#\$%\^&\*+])[a-zA-Z\d!@#\$%\^&\*+]{8,}$">
+            <div class="mini info">
+                <div class="oeil">
+                    <i class="fas fa-eye"></i>
+                </div>
+            </div>
+
+            <div class="info picto">
+                <i class="far fa-question-circle fa-2x infobulle"></i>
+                <div class="texteInfoBulle"></div>
+                <div class="aideMdp">
+                    <div>Liste des critères à respecter</div>
+                    <div>
+                        <div class="mini"><i class="far fa-times-circle rouge"></i>
+                        </div>
+                        <div class="gauche">8 caractères minimum</div>
+                    </div>
+                    <div>
+                        <div class="mini"><i class="far fa-times-circle rouge"></i>
+                        </div>
+                        <div class="gauche">majuscule(s)</div>
+                    </div>
+                    <div>
+                        <div class="mini"><i class="far fa-times-circle rouge"></i>
+                        </div>
+                        <div class="gauche">minuscule(s)</div>
+                    </div>
+                    <div>
+                        <div class="mini"><i class="far fa-times-circle rouge"></i>
+                        </div>
+                        <div class="gauche">nombre(s)</div>
+                    </div>
+                    <div>
+                        <div class="mini"><i class="far fa-times-circle rouge"></i>
+                        </div>
+                        <div class="gauche">caractères spéciaux</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="check picto">
+                <i class="far fa-check-circle fa-2x vert"></i>
+            </div>
+            <div class="message"></div>
+        </div>
+        <div class="ligne">
+            <label for="confirmation">Confirmation Mot de passe</label>
+            <input required type="password" name="confirmation" id="confirmation" title="remettre le même mot de passe">
+            <div class="mini"></div>
+            <div class="info picto">
+                <i class="far fa-question-circle fa-2x infobulle"></i>
+                <div class="texteInfoBulle"></div>
+            </div>
+            <div class="check picto">
+                <i class="far fa-check-circle fa-2x vert"></i>
+            </div>
+            <div class="message"></div>
+        </div>
+        <div class="ligne">
+            <label for="cp">Code Postal</label>
+            <input required class="checkValidity" type="text" name="cp" id="cp" title="5 chiffres" pattern="^\d{5}$">
+            <div class="mini"></div>
+            <div class="info picto">
+                <i class="far fa-question-circle fa-2x infobulle"></i>
+                <div class="texteInfoBulle"></div>
+            </div>
+            <div class="check picto">
+                <i class="far fa-check-circle fa-2x vert"></i>
+            </div>
+            <div class="message"></div>
+        </div>
+        <div class="ligne">
+            <label for="tel">Téléphone</label>
+            <input required class="checkValidity" type="text" name="tel" id="tel"
+                title="un numéro de téléphone vadivde commencant par 0, sur 10 chiffres"
+                pattern="^0[1-9]([-./ ]?[\d]{2}){4}$">
+            <div class="mini"></div>
+            <div class="info picto">
+                <i class="far fa-question-circle fa-2x infobulle"></i>
+                <div class="texteInfoBulle"></div>
+            </div>
+            <div class="check picto">
+                <i class="far fa-check-circle fa-2x vert"></i>
+            </div>
+            <div class="message"></div>
+        </div>
+
+        <input type="submit" id="submit" disabled>
+    </form>
+
+    <script src="js/regex.js"></script>
+
+</body>
+
+</html>
